@@ -1,0 +1,108 @@
+<!-- Page Content -->
+<div class="divide10"></div>
+<div class="container">
+	<ol class="breadcrumb">
+		<li><a href="index.xhtml">Home</a></li>
+		<li class="active">Document Conversions</li>
+	</ol>
+	<div class="row">
+		<!--  row -->
+		<div class="col-md-8">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3>Conversion of Legacy MS Word /PDF to XML</h3>
+				</div>
+				<div class="panel-body">
+					<p class="text_3 color_3">Our firm has developed an open source tool, 
+					which automatically converts legacy MS Word, PDF documents to XML. 
+					The tool can also generate PDF from generated XML if applicable</p>
+					<p class="text_3 color_3"> The conversion process is shown in Figure 1</p>
+					<p class="text_3 color_3"><img src="images/word-conversion.png" class="img-responsive" alt=""></p>
+					<p>Figure 1</p>
+
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3>How the Conversion Works</h3>
+				</div>
+				<div class="panel-body">				
+					<p class="text_3 color_3">
+						As shown in Figure 1, the word conversion tool is a multi-phase process.  
+						The first phase called <i>analysis</i> will extract the metadata from the document, 
+						It then compares the extracted information against the known patterns.  
+						If a match is found, the documents with known patterns will be grouped into buckets 
+						and will be forwarded to the next phrase called <i>parsing</i>.  
+						If the pattern is not found, the analysis will collect the document and 
+						push it to a pattern collector, which will be reviewed by our engineers, 
+						who will then extend the pattern recognizer to include the new patterns.  
+						The new patterns will be added to the software once the software is updated.  
+						Meanwhile, all the known patterns are being processed by the parsing phrase.
+					</p>
+
+					<p class="text_3 color_3">
+						In the parsing phrase,  each bucket will be parsed by different parsers.  
+						The parser will parse the MS Word documents and produce intermediate 
+						representation (IR) models.  These IR models will be fed into the XML 
+						transformer phrase.  Documents with errors will be collected by error collector 
+						for manual review.  In addition to the content of the documents are being stored 
+						in IR models, the original document styles will be saved as 
+						Cascading style sheet (CSS) in a separate file.  The XML transformers 
+						will load each XML templates from external source and combine with IR models 
+						to produce different XML documents.  By separating the IR models from the 
+						actual XML output, the tool provides a flexibility to add more XML templates 
+						and can produce many XML outputs from one IR model.  This approach is called 
+						separation of concerns proposed by Dr. Parr (2006). 
+
+					</p>
+					
+					
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			
+			<div class="panel panel-default ">
+				<div class="panel-heading">
+					<h3>Case Study</h3>
+				</div>
+				<div class="panel-body">
+					This project automatically converts DSP documents from ASSIST in Word format to XML and 
+					also generates the PDF according to the original layout
+
+				</div>
+			</div>
+
+			<div class="panel panel-default ">
+				<div class="panel-heading">
+					<h3>Questions</h3>
+				</div>
+				<div class="panel-body">
+					If you have any questions about the conversion process or need to migrate the legacy 
+					Word documents to XML or relational data models, please contact us.
+
+				</div>
+			</div>
+
+			<div class="panel panel-default ">
+				<div class="panel-heading">
+					<h3>Technology</h3>
+				</div>
+				<div class="panel-body">
+					<ul class="list-unstyled cat-list">
+						<li>ANTLR 4</li>
+						<li>SpringTemplate 4</li>
+						<li>PDFBox</li>
+						<li>iText 2.7.1</li>
+						<li>Jsoup</li>
+						<li>dom4j</li>
+						<li>Gradle</li>						
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
